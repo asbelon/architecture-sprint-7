@@ -2,8 +2,8 @@
 
 title UC02 - Открытие двери через домофон ([[./uc.puml варианты использования]])
 
-box "PropDevelopment"
 actor Жилец as Tenant
+box "PropDevelopment"
 participant "Витрина собственника" as MobileApp
 participant "tenant-core-app" as TenantCoreApp
 end box

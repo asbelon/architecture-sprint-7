@@ -10,7 +10,7 @@ usecase "[[./UC02i1.puml Регистрация услуги Домофон]]" a
 usecase "[[./UC02.puml Открытие двери через домофон]]" as UC02
 usecase "[[./UC03.puml Открытие двери по лицу]]" as UC03
 usecase "[[./UC05i1.puml Регистрация услуги Шлагбаум]]" as UC05i1
-usecase "[[./UC05.puml Открытие двери по лицу]]" as UC05
+usecase "[[./UC05.puml Открытие шлагбаума по номеру авто]]" as UC05
 usecase "[[./UC03i1.puml Регистрация биометрии]]" as UC03i1
 
 Tenant --> UC02

@@ -2,33 +2,16 @@
 
 title UC03 - Открытие двери по лицу ([[./uc.puml варианты использования]])
 
-box "PropDevelopment"
 actor Жилец as Tenant
-participant "Витрина собственника" as MobileApp
-participant "tenant-core-app" as TenantCoreApp
-end box
 box "Сервис умного дома"
-participant "Умный дом" as SmartHome
-participant "Домофон" as Intercom
-actor Гость as Guest
+    participant "Домофон" as Intercom
+    participant "Умный дом" as SmartHome
 end box
 
-Guest -> Intercom: Набор звонка
-Intercom -> SmartHome: Сообщение о звонке (intercom, house)
-SmartHome -> TenantCoreApp: Сообщение о звонке в помещение (house)
-TenantCoreApp -> TenantCoreApp: Определение пользователя/жильца по номеру помещения
-TenantCoreApp -> MobileApp: Сообщение о звонке в домофон (user)
-MobileApp -> Tenant: Уведомление/визуализация звонка в домофон
-Tenant -> MobileApp: Нажатие кнопки снятия звонка
-MobileApp -> TenantCoreApp: Запрос на подключение к домофону (user)
-TenantCoreApp -> SmartHome: Запрос на подключение к домофону из помещения (house)
-SmartHome -> TenantCoreApp: Возвращает адрес трансляции видео домофона (video_url)
-TenantCoreApp -> MobileApp: Ответ с адресом трансляция видео домофона (video_url)
-MobileApp -> Tenant: Воспроизведение видео домофона
-MobileApp -> MobileApp: Появление кнопки открытия двери
-Tenant -> MobileApp: Нажатие кнопки открытия двери
-MobileApp -> TenantCoreApp: Запрос открытия двери (User)
-TenantCoreApp -> SmartHome: Запрос открытия двери из помещения (house)
-SmartHome -> Intercom: Команда на открытие двери
+box "PropDevelopment"
+    participant "Витрина собственника" as MobileApp
+    participant "tenant-core-app" as TenantCoreApp
+end box
 
+Tenant -> Intercom: подходит к домофону (intercom)
 @enduml
