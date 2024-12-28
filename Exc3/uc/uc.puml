@@ -1,0 +1,26 @@
+@startuml
+
+title Варианты использования в рамках [[./../context.puml интеграции с партнером для предоставления собственникам услуг умного дома]]
+
+left to right direction
+
+actor Жилец as Tenant
+
+usecase "[[./UC02i1.puml Регистрация услуги Домофон]]" as UC02i1
+usecase "[[./UC02.puml Открытие двери через домофон]]" as UC02
+usecase "[[./UC03.puml Открытие двери по лицу]]" as UC03
+usecase "[[./UC05i1.puml Регистрация услуги Шлагбаум]]" as UC05i1
+usecase "[[./UC05.puml Открытие двери по лицу]]" as UC05
+usecase "[[./UC03i1.puml Регистрация биометрии]]" as UC03i1
+
+Tenant --> UC02
+Tenant --> UC03
+Tenant --> UC05
+
+UC02 --> UC02i1: <include>
+UC05 --> UC05i1: <include>
+UC03 --> UC03i1: <include>
+
+'url of UC01 is [[./uc.puml]]
+
+@enduml

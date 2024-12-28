@@ -1,0 +1,82 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
+  <diagram name="Страница — 1" id="AA9cZ-glA_Fp__WyKTjR">
+    <mxGraphModel dx="31" dy="594" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nFB4tpNnGNIT1_HhN5Ei-163" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" target="XOnH5t-txGrDBZ7-4m-t-2" edge="1" source="nFB4tpNnGNIT1_HhN5Ei-214">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020" y="455" as="targetPoint" />
+            <mxPoint x="1020" y="245" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XOnH5t-txGrDBZ7-4m-t-6" value="Регистрация услуги Домофон" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nFB4tpNnGNIT1_HhN5Ei-163">
+          <mxGeometry x="0.1091" y="-1" relative="1" as="geometry">
+            <mxPoint x="40" y="-83" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XOnH5t-txGrDBZ7-4m-t-8" value="Предоставить номер авто&amp;nbsp;&lt;div&gt;(для автоматического поднятия шлагбаума)&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nFB4tpNnGNIT1_HhN5Ei-163">
+          <mxGeometry x="0.5694" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XOnH5t-txGrDBZ7-4m-t-4" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XOnH5t-txGrDBZ7-4m-t-1" target="nFB4tpNnGNIT1_HhN5Ei-214">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1560" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XOnH5t-txGrDBZ7-4m-t-5" value="Наблюдение&amp;nbsp;&lt;div&gt;(камера домофона, камера шлагбаума)&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="XOnH5t-txGrDBZ7-4m-t-4">
+          <mxGeometry x="-0.1242" y="3" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <object placeholders="1" c4Name="Собственник" c4Type="Person" c4Description="Клиент" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="nFB4tpNnGNIT1_HhN5Ei-214">
+          <mxCell style="html=1;fontSize=11;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];resizable=0;" parent="1" vertex="1">
+            <mxGeometry x="1110" y="60" width="200" height="180" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="XOnH5t-txGrDBZ7-4m-t-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XOnH5t-txGrDBZ7-4m-t-2" target="XOnH5t-txGrDBZ7-4m-t-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1230" y="560" />
+              <mxPoint x="1230" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XOnH5t-txGrDBZ7-4m-t-9" value="Запрос на открытие&amp;nbsp;&lt;div&gt;(двери, шлагбаума)&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="XOnH5t-txGrDBZ7-4m-t-3">
+          <mxGeometry x="-0.3602" y="-3" relative="1" as="geometry">
+            <mxPoint x="47" y="22" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <object placeholders="1" c4Name="SmartHome" c4Type="Software System" c4Description="Услуги умного дома:&#xa;Интеллектуальный домофон&#xa;Интеллектуальный шлагбаум" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="XOnH5t-txGrDBZ7-4m-t-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+            <mxGeometry x="1360" y="480" width="240" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="PropDevelopment" c4Type="Software System" c4Description="" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="XOnH5t-txGrDBZ7-4m-t-2">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#1061B0;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0D5091;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1" parent="1">
+            <mxGeometry x="860" y="480" width="240" height="120" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="XOnH5t-txGrDBZ7-4m-t-7" value="Предоставить биометрию&amp;nbsp;&lt;div&gt;(для автоматического открытия&amp;nbsp;&lt;/div&gt;&lt;div&gt;двери при распозновании лица)&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1110.001577071512" y="349.9998911632223" as="geometry" />
+        </mxCell>
+        <mxCell id="XOnH5t-txGrDBZ7-4m-t-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XOnH5t-txGrDBZ7-4m-t-1" target="XOnH5t-txGrDBZ7-4m-t-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1110" y="590" as="sourcePoint" />
+            <mxPoint x="1370" y="590" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1230" y="520" />
+              <mxPoint x="1230" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XOnH5t-txGrDBZ7-4m-t-12" value="Уведомление&amp;nbsp;&lt;div&gt;(о звонке,&amp;nbsp;&lt;/div&gt;&lt;div&gt;о подъезде авто,&amp;nbsp;&lt;/div&gt;&lt;div&gt;об открытии двери)&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="XOnH5t-txGrDBZ7-4m-t-11">
+          <mxGeometry x="-0.3602" y="-3" relative="1" as="geometry">
+            <mxPoint x="-37" y="-27" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

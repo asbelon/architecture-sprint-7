@@ -1,0 +1,20 @@
+@startuml
+title Интеграция с партнером для предоставления собственникам услуг умного дома
+
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Component.puml
+
+Person(Tenant, "Собственник")
+System(PropDevelopment, "PropDevelopment", "Услуги строительной компании")
+System_Ext(SmartHome, "SmartHome", "Услуги умного дома:\nИнтеллектуальный домофон\nИнтеллектуальный шлагбаум")
+
+Rel(Tenant, PropDevelopment, "[[./uc/UC02i1.puml Регистрация услуги Домофон]]")
+Rel(Tenant, PropDevelopment, "Предоставить биометрию\n(для автоматического открытия\nдвери при распозновании лица)")
+Rel(Tenant, PropDevelopment, "Предоставить номер авто\n(для автоматического поднятия шлагбаума)")
+
+Rel(SmartHome, Tenant, "Наблюдение\n(камера домофона, камера шлагбаума)", "video")
+
+Rel(SmartHome, PropDevelopment, "Уведомление\n(о звонке,\nо подъезде авто,\nоб открытии двери)")
+Rel(PropDevelopment, SmartHome, "Запрос на открытие\n(двери, шлагбаума)")
+Rel(PropDevelopment, SmartHome, "Регистрация")
+
+@enduml
