@@ -2,6 +2,22 @@
 
 title UC05i1 - Регистрация услуги Шлагбаум ([[./uc.puml варианты использования]])
 
+actor Жилец as Tenant
 
+box "PropDevelopment"
+    participant "Витрина собственника" as MobileApp
+    participant "tenant-core-app" as TenantCoreApp
+    database "tenant-bio-metrika" as TenantBioMetrika
+end box
+
+Tenant -> MobileApp: аутентификация (сопоставление жильца и user) и авторизация
+MobileApp -> Tenant: запрос регистрацию услуги Шлагбаум
+Tenant -> MobileApp: указывает номер авто (number)
+group двухфакторная аутентификация [[UC06.puml двухфакторная аутентификация]]
+end group
+MobileApp -> TenantCoreApp: передает номер авто (number)
+TenantCoreApp -> TenantCoreApp: закрепляет номер авто (number) за пользователем
+TenantCoreApp -> MobileApp: сообщает об успешной регистрации номера
+MobileApp -> Tenant: уведомляет об успешной регистрации номера
 
 @enduml

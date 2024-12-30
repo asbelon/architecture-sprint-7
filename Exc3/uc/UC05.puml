@@ -2,6 +2,25 @@
 
 title UC05 - Открытие шлагбаума по номеру авто ([[./uc.puml варианты использования]])
 
+actor Жилец as Tenant
 
+box "Сервис умного дома"
+participant "Ворота" as Gate
+participant "Камера" as VideoCamera
+participant "Умный дом" as SmartHome
+end box
+
+box "PropDevelopment"
+participant "Витрина собственника" as MobileApp
+participant "tenant-core-app" as TenantCoreApp
+end box
+
+Tenant -> VideoCamera: Подъезжает в поле видимости камеры
+VideoCamera -> SmartHome: Передача медиа данных
+SmartHome -> SmartHome: Распознает номер (number)
+SmartHome -> TenantCoreApp: Запрос на принадлежность номера собственнику (number)
+TenantCoreApp -> TenantCoreApp: Проверка на [[UC05i1.puml регистрацию номера]] (number)
+TenantCoreApp -> SmartHome: Подтверждает принадлежность номера собственнику (number)
+SmartHome -> Gate: Команда на открытие ворот
 
 @enduml

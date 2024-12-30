@@ -9,9 +9,13 @@ box "Сервис умного дома"
 end box
 
 box "PropDevelopment"
-    participant "Витрина собственника" as MobileApp
     participant "tenant-core-app" as TenantCoreApp
 end box
 
-Tenant -> Intercom: подходит к домофону (intercom)
+Tenant -> Intercom: нажимает кнопку открытия двери домофона (intercom)
+Intercom -> Intercom: получает фотоизображение (photo)
+Intercom -> SmartHome: сообщение о запросе открытия двери (intercom, photo)
+SmartHome -> TenantCoreApp: запрос на проверку [[UC03i1.puml возможности открытия по биометрии]] (photo)
+TenantCoreApp -> SmartHome: Открытие разрешено
+SmartHome -> Intercom: Команда на открытие
 @enduml

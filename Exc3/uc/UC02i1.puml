@@ -2,8 +2,11 @@
 
 title UC01 - Регистрация услуги Домофон ([[./uc.puml варианты использования]])
 
-box "PropDevelopment"
 actor Жилец as Tenant
+
+participant "СМС провайдер" as SmsProvider
+
+box "PropDevelopment"
 participant "Витрина собственника" as MobileApp
 participant "tenant-core-app" as TenantCoreApp
 end box
@@ -11,17 +14,22 @@ box "Сервис умного дома"
 participant "Умный дом" as SmartHome
 end box
 
+
+
 Tenant -> MobileApp: аутентификация (сопоставление жильца и user) и авторизация
 MobileApp -> Tenant: запрос на подключение услуги Домофон
 Tenant -> MobileApp: согласие на подключение услуги Домофон
 MobileApp -> TenantCoreApp: запрос на подключение услуги (user, service)
-activate MobileApp
+
+group двухфакторная аутентификация [[UC06.puml двухфакторная аутентификация]]
+end group
+
 TenantCoreApp -> TenantCoreApp: определение помещения (house) по жильцу (user)
 TenantCoreApp -> SmartHome: запрос на подключение помещения к домофону (house)
 SmartHome -> TenantCoreApp: ответ на успешное подключение помещения к домофону (house)
 TenantCoreApp -> TenantCoreApp: сохранение услуги save_service(user, service, house)
 TenantCoreApp -> MobileApp: ответ на запрос
-deactivate MobileApp
+
 MobileApp -> Tenant: Уведомление о подключенной услуги Домофон
 
 @enduml

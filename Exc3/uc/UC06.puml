@@ -1,0 +1,13 @@
+@startuml
+
+title UC06 - Двухфакторная аутентификация ([[./uc.puml варианты использования]])
+
+MobileApp --> Tenant: отображение формы ввода проверочного кода
+TenantCoreApp -> TenantCoreApp: определение номера телефона пользователя (phone)
+TenantCoreApp -> SmsProvider: запрос на отправку смс с кодом подтверждения (phone, code)
+SmsProvider -> Tenant: отправка смс с кодом подтверждения (code)
+Tenant -> MobileApp: ввод кода (code)
+MobileApp -> TenantCoreApp: передача кода (code)
+TenantCoreApp -> TenantCoreApp: верификация кода (code)
+
+@enduml
